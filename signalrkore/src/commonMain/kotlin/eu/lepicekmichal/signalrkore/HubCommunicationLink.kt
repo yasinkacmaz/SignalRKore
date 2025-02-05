@@ -26,7 +26,7 @@ abstract class HubCommunicationLink(private val json: Json) : HubCommunication()
 
     protected abstract val scope: CoroutineScope
 
-    private val receivedInvocations = MutableSharedFlow<HubMessage.Invocation>()
+    val receivedInvocations = MutableSharedFlow<HubMessage.Invocation>()
     private val receivedCompletions = MutableSharedFlow<HubMessage.Completion>()
     private val receivedStreamItems = MutableSharedFlow<HubMessage.StreamItem>()
 
